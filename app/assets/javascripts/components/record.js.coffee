@@ -7,11 +7,6 @@
 			dataType: 'JSON'
 			success: () =>
 				@props.handleDeleteRecord @props.record
-	deleteRecord: (record) ->
-		records = @state.records.slice()
-		index = records.indexOf record
-		records.splice index, 1
-		@replaceState records: records
 	render: ->
 		React.DOM.tr null,
 			React.DOM.td null, @props.record.date
